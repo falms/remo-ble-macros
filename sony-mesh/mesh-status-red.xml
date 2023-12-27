@@ -1,0 +1,8 @@
+<macro name="mesh status red" icon="LED_ON">
+   <assert-service description="Ensure 72c90001-57a9-4d40-b746-534e22ec9f9e service" uuid="72c90001-57a9-4d40-b746-534e22ec9f9e">
+      <assert-characteristic description="Ensure 72c90002-57a9-4d40-b746-534e22ec9f9e characteristic" uuid="72c90002-57a9-4d40-b746-534e22ec9f9e">
+         <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
+      </assert-characteristic>
+   </assert-service>
+   <write description="Write 0x00000100000102 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000100000102" type="WRITE_COMMAND"/>
+</macro>
