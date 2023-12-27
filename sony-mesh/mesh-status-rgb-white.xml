@@ -1,0 +1,17 @@
+<macro name="mesh status cyclic" icon="LED_ON">
+   <assert-service description="Ensure 72c90001-57a9-4d40-b746-534e22ec9f9e service" uuid="72c90001-57a9-4d40-b746-534e22ec9f9e">
+      <assert-characteristic description="Ensure 72c90002-57a9-4d40-b746-534e22ec9f9e characteristic" uuid="72c90002-57a9-4d40-b746-534e22ec9f9e">
+         <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
+      </assert-characteristic>
+   </assert-service>
+   <write description="Write 0x00000100000102 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000100000102" type="WRITE_COMMAND"/>
+   <sleep description="Sleep 500 ms" timeout="500"/>
+   <write description="Write 0x00000001000102 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000001000102" type="WRITE_COMMAND"/>
+   <sleep description="Sleep 500 ms" timeout="500"/>
+   <write description="Write 0x00000000010102 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000000010102" type="WRITE_COMMAND"/>
+   <sleep description="Sleep 500 ms" timeout="500"/>
+   <write description="Write 0x00000101010104 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000101010104" type="WRITE_COMMAND"/>
+   <sleep description="Sleep 500 ms" timeout="500"/>
+   <write description="Write 0x00000000000000 to 72c90002-57a9-4d40-b746-534e22ec9f9e" characteristic-uuid="72c90002-57a9-4d40-b746-534e22ec9f9e" service-uuid="72c90001-57a9-4d40-b746-534e22ec9f9e" value="00000000000000" type="WRITE_COMMAND"/>
+   <sleep description="Sleep 500 ms" timeout="500"/>
+</macro>
